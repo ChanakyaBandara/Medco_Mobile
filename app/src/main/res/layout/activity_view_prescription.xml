@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewPrescription">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_back"/>
+
+            <TextView
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/medium"
+                android:text="Back"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout1"
+            android:layout_below="@id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10sp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnQr"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/qr_code_50px"
+                    android:onClick="goToQR"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginBottom="15sp"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/medium"
+                    android:text="Prescription"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15sp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="2sp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/regular"
+                        android:text="Prescription No : "
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txtPresViewID"
+                        android:layout_width="0sp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="2sp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/regular"
+                        android:text="#52651256"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15sp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="2sp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/regular"
+                        android:text="Patient Name : "
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txtPresViewPName"
+                        android:layout_width="0sp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="2sp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/regular"
+                        android:text="Chanakya Bandara"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15sp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="2sp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/regular"
+                        android:text="Issued Date : "
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txtPresViewDate"
+                        android:layout_width="0sp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="2sp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/regular"
+                        android:text="2020-10-20"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15sp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="2sp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/regular"
+                        android:text="Issued Doctor : "
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txtPresViewDName"
+                        android:layout_width="0sp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="2sp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/regular"
+                        android:text="Malith Ileperuma"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <RelativeLayout
+            android:layout_below="@id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TableLayout
+                    android:id="@+id/tblDrugs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="10sp"
+                    android:layout_marginHorizontal="15sp"
+                    android:stretchColumns="1,2,3">
+
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginBottom="2sp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/medium"
+                            android:text="ID"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:layout_column="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginBottom="2sp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/medium"
+                            android:text="Drug Name"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:layout_column="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginBottom="2sp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/medium"
+                            android:text="Dosage"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:layout_column="1"/>
+
+                    </TableRow>
+
+<!--                    <TableRow-->
+<!--                        android:clickable="true"-->
+<!--                        android:onClick="gotoDetail">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="5sp"-->
+<!--                            android:layout_marginBottom="2sp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/light"-->
+<!--                            android:text="#1526"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="13sp"-->
+<!--                            android:layout_column="1"/>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="5sp"-->
+<!--                            android:layout_marginBottom="2sp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/light"-->
+<!--                            android:text="Sputnic IV"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="13sp"-->
+<!--                            android:layout_column="1"/>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="5sp"-->
+<!--                            android:layout_marginBottom="2sp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/light"-->
+<!--                            android:text="10 ml"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="13sp"-->
+<!--                            android:layout_column="1"/>-->
+
+
+
+<!--                    </TableRow>-->
+
+<!--                    <TableRow-->
+
+<!--                        android:clickable="true"-->
+<!--                        android:onClick="gotoDetail">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="5sp"-->
+<!--                            android:layout_marginBottom="2sp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/light"-->
+<!--                            android:text="#1527"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="13sp"-->
+<!--                            android:layout_column="1"/>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="5sp"-->
+<!--                            android:layout_marginBottom="2sp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/light"-->
+<!--                            android:text="Amoxillin"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="13sp"-->
+<!--                            android:layout_column="1"/>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="5sp"-->
+<!--                            android:layout_marginBottom="2sp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/light"-->
+<!--                            android:text="500 mg"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="13sp"-->
+<!--                            android:layout_column="1"/>-->
+
+
+
+<!--                    </TableRow>-->
+
+                </TableLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
