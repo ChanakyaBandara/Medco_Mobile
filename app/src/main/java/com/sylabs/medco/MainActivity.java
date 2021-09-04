@@ -7,7 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Toast;
+
+import com.sylabs.medco.services.Backgroundworker;
 
 import org.json.JSONException;
 import org.json.JSONObject;

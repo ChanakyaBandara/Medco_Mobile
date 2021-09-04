@@ -17,6 +17,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.sylabs.medco.services.Backgroundworker;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 

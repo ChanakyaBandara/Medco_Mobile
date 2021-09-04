@@ -1,4 +1,4 @@
-package com.sylabs.medco;
+package com.sylabs.medco.models;
 
 public class PreOder {
     private String oder_id, oder_date, reference, Cost, PHID, PID, Ph_name;

@@ -1,9 +1,7 @@
-package com.sylabs.medco;
+package com.sylabs.medco.recycleviews;
 
 
-import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -11,7 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.io.Serializable;
+import com.sylabs.medco.models.PreOder;
+import com.sylabs.medco.PurchaseHistory;
+import com.sylabs.medco.R;
+
 import java.util.List;
 
 public class Recycleview_config_history {

@@ -12,11 +12,14 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sylabs.medco.models.Drug;
+import com.sylabs.medco.models.Prescription;
+import com.sylabs.medco.services.Backgroundworker;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

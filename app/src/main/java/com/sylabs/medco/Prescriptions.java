@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.sylabs.medco.models.Prescription;
+import com.sylabs.medco.recycleviews.Recycleview_config_prescriptions;
+import com.sylabs.medco.services.Backgroundworker;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -60,7 +64,7 @@ public class Prescriptions extends AppCompatActivity {
             if (dataListID.isEmpty()) {
                 Toast.makeText(this, "No Records Available !", Toast.LENGTH_SHORT).show();
             } else {
-                new Recycleview_config().setConfig(recyclerView, Prescriptions.this, dataList, dataListID);
+                new Recycleview_config_prescriptions().setConfig(recyclerView, Prescriptions.this, dataList, dataListID);
             }
 
         } catch (JSONException e) {

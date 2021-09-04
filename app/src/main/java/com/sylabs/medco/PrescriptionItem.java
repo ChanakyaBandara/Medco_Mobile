@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.sylabs.medco.services.Backgroundworker;
 
 import org.json.JSONArray;
 import org.json.JSONException;

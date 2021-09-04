@@ -1,4 +1,4 @@
-package com.sylabs.medco;
+package com.sylabs.medco.models;
 
 public class Drug {
     private String DrID, DrName, DrMan, DrStr, DrDes, DrImg, Dose;

@@ -1,4 +1,4 @@
-package com.sylabs.medco;
+package com.sylabs.medco.models;
 
 import java.io.Serializable;
 

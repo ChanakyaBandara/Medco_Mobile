@@ -1,21 +1,25 @@
-package com.sylabs.medco;
+package com.sylabs.medco.recycleviews;
 
 
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.sylabs.medco.models.Prescription;
+import com.sylabs.medco.Prescriptions;
+import com.sylabs.medco.R;
+import com.sylabs.medco.ViewPrescription;
+
 import java.io.Serializable;
 import java.util.List;
 
-public class Recycleview_config {
+public class Recycleview_config_prescriptions {
     private Prescriptions mContext;
     private RecAddaptor mRecAddaptor;
 

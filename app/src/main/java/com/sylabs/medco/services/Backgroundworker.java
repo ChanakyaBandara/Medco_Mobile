@@ -1,4 +1,4 @@
-package com.sylabs.medco;
+package com.sylabs.medco.services;
 
 import android.app.Dialog;
 import android.graphics.Color;
@@ -9,6 +9,15 @@ import android.widget.ProgressBar;
 
 //import com.github.ybq.android.spinkit.sprite.Sprite;
 //import com.github.ybq.android.spinkit.style.Wave;
+
+import com.sylabs.medco.Login;
+import com.sylabs.medco.MainActivity;
+import com.sylabs.medco.PrescriptionItem;
+import com.sylabs.medco.Prescriptions;
+import com.sylabs.medco.Profile;
+import com.sylabs.medco.PurchaseHistory;
+import com.sylabs.medco.Registration;
+import com.sylabs.medco.ViewPrescription;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -37,22 +46,22 @@ public class Backgroundworker extends AsyncTask<HashMap<String, String>, Void, S
     private Dialog myDialog;
 
 
-    Backgroundworker(MainActivity parent) {
+    public Backgroundworker(MainActivity parent) {
         ParentM = parent;
         myDialog = new Dialog(ParentM);
     }
 
-    Backgroundworker(Registration parent) {
+    public Backgroundworker(Registration parent) {
         ParentR = parent;
         myDialog = new Dialog(ParentR);
     }
 
-    Backgroundworker(Login parent) {
+    public  Backgroundworker(Login parent) {
         ParentL = parent;
         myDialog = new Dialog(ParentL);
     }
 
-    Backgroundworker(Profile parent) {
+    public Backgroundworker(Profile parent) {
         ParentP = parent;
         myDialog = new Dialog(ParentP);
     }
@@ -76,6 +85,9 @@ public class Backgroundworker extends AsyncTask<HashMap<String, String>, Void, S
         ParentDrg = parent;
         myDialog = new Dialog(ParentDrg);
     }
+
+
+
 
     @Override
     protected String doInBackground(HashMap<String, String>... params) {
