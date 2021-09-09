@@ -24,7 +24,7 @@ public class PrescriptionItem extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prescription_item);
+        setContentView(R.layout.activity_drug_view);
         String DRid = getIntent().getStringExtra("Extra_Drg");
         txtDname = (TextView) findViewById(R.id.txtPIdrg);
         txtDmanf = (TextView) findViewById(R.id.txtPImanf);

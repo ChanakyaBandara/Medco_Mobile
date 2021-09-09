@@ -10,13 +10,16 @@ import android.widget.ProgressBar;
 //import com.github.ybq.android.spinkit.sprite.Sprite;
 //import com.github.ybq.android.spinkit.style.Wave;
 
+import com.sylabs.medco.Camera;
 import com.sylabs.medco.Login;
 import com.sylabs.medco.MainActivity;
 import com.sylabs.medco.PrescriptionItem;
 import com.sylabs.medco.Prescriptions;
 import com.sylabs.medco.Profile;
 import com.sylabs.medco.PurchaseHistory;
+import com.sylabs.medco.Queue;
 import com.sylabs.medco.Registration;
+import com.sylabs.medco.SelectPrescription;
 import com.sylabs.medco.ViewPrescription;
 
 import java.io.BufferedReader;
@@ -42,6 +45,9 @@ public class Backgroundworker extends AsyncTask<HashMap<String, String>, Void, S
     private ViewPrescription ParentView;
     private PurchaseHistory ParentPHis;
     private PrescriptionItem ParentDrg;
+    private Camera ParentCamera;
+    private Queue ParentQueue;
+    private SelectPrescription ParentSelectPrescription;
     private String type = "";
     private Dialog myDialog;
 
@@ -86,7 +92,20 @@ public class Backgroundworker extends AsyncTask<HashMap<String, String>, Void, S
         myDialog = new Dialog(ParentDrg);
     }
 
+    public Backgroundworker(Camera parent) {
+        ParentCamera = parent;
+        myDialog = new Dialog(ParentCamera);
+    }
 
+    public Backgroundworker(SelectPrescription parent) {
+        ParentSelectPrescription = parent;
+        myDialog = new Dialog(ParentSelectPrescription);
+    }
+
+    public Backgroundworker(Queue parent) {
+        ParentQueue = parent;
+        myDialog = new Dialog(ParentQueue);
+    }
 
 
     @Override
@@ -183,6 +202,26 @@ public class Backgroundworker extends AsyncTask<HashMap<String, String>, Void, S
 
         if (type.equals("load_drug")) {
             ParentDrg.displayName(result);
+        }
+
+        if (type.equals("load_doctor")) {
+            ParentCamera.displayNameDoc(result);
+        }
+
+        if (type.equals("load_pharmacy")) {
+            ParentCamera.displayNamePha(result);
+        }
+
+        if (type.equals("load_select_prescription")) {
+            ParentSelectPrescription.displayName(result);
+        }
+
+        if (type.equals("load_doc_queue")) {
+            ParentQueue.displayDoc(result);
+        }
+
+        if (type.equals("load_pharmacy_queue")) {
+            ParentQueue.displayPharmacy(result);
         }
 
 

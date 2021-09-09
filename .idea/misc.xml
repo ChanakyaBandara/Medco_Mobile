@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-mdpi/button_border.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/activity_drug_view.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/activity_prescription_item.xml" value="0.315625" />
+        <entry key="app/src/main/res/layout/activity_prescriptions.xml" value="0.315625" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.278125" />
+        <entry key="app/src/main/res/layout/activity_queue.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_select_prescription.xml" value="0.11822916666666666" />
+        <entry key="app/src/main/res/layout/custom_popup_doc.xml" value="0.315625" />
+        <entry key="app/src/main/res/layout/custom_popup_pha.xml" value="0.315625" />
+        <entry key="app/src/main/res/layout/item_prescription.xml" value="0.315625" />
+        <entry key="app/src/main/res/layout/item_purchase.xml" value="0.315625" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

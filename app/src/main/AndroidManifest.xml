@@ -17,7 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Medco">
-        <activity android:name=".QrView"></activity>
+        <activity
+            android:name=".SelectPrescription"
+            android:exported="true" />
+        <activity
+            android:name=".Queue"
+            android:exported="true" />
+        <activity android:name=".QrView" />
         <activity android:name=".PurchaseHistory" />
         <activity android:name=".PrescriptionItem" />
         <activity android:name=".ViewPrescription" />
